@@ -1,4 +1,4 @@
---Yêu cầu tìm ra những trường   đại học nằm  ở thành phố có tỷ lệ tội phạm  thấp hơn 50% và có hạng star up lớn hơn hoặc bằng 75% và có ngành IT và ở khu vực là metropolian area.......--
+--Yêu cầu tìm ra những trường đại học nằm  ở thành phố có tỷ lệ tội phạm  thấp hơn 50% và có hạng star up lớn hơn hoặc bằng 75% và có ngành IT và ở khu vực là metropolian area.......--
 With Crime_Percent AS (
 SELECT[MSA], PERCENT_RANK() OVER (ORDER BY ISNULL([ViolentCrime],0)+ISNULL([Murder],0)+ISNULL([Rape],0)+ISNULL([Robbery],0)
 +ISNULL([AggravatedAssault],0)+ISNULL([PropertyCrime],0)+ISNULL([Burglary],0)+ISNULL([Theft],0)+ISNULL([MotorVehicleTheft],0)) CrimePercent
